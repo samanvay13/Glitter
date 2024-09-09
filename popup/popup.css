@@ -1,0 +1,213 @@
+body {
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 20px;
+    width: 500px;
+    background-color: #fff;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    margin-left: 15px;
+}
+
+.hamburger-menu {
+    position: relative;
+    margin-right: 10px;
+}
+
+.hamburger-menu .fa-bars {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    width: 300px;
+    right: 0;
+    top: 30px;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-content.show {
+    display: block;
+}
+
+.description {
+    margin: 20px;
+}
+
+p {
+    font-size: 13px;
+}
+
+.text-boxes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+textarea,
+#apiKeyInput {
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 44%;
+    height: 200px;
+    border-width: 0.5px;
+    border-color: #6DD19C;
+    border-radius: 15px;
+    resize: none;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#apiKeyInput {
+    width: 90%;
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+body.dark-mode textarea,
+body.dark-mode #apiKeyInput {
+    background-color: #000;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.buttons button,
+#apiKeySaveBtn {
+    flex: 1;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 10px;
+    background: linear-gradient(145deg, #6DD19C, #48a478);
+    color: #fff;
+    border-width: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.notes {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.notes textarea {
+    width: 100%;
+    height: 50px;
+    resize: none;
+}
+
+body.dark-mode .menu-content {
+    background-color: #555;
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 14px;
+    margin: 0 10px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: -3px;
+    bottom: -3px;
+    background-color: rgb(240, 240, 240);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #6DD19C;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.toggle-switch i {
+    font-size: 18px;
+    color: #6DD19C;
+    transition: color 0.3s;
+}
+
+body.dark-mode .toggle-switch i {
+    color: #ffd700;
+}
+
+.api-key-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.api-key-section button {
+    width: 40%;
+    margin-top: 5px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitter - AI Text Enhancer</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1>✨ Glitter - AI Text Enhancer</h1>
+        </div>
+        <div class="hamburger-menu">
+            <i class="fas fa-bars" id="hamburgerIcon"></i>
+            <div class="menu-content" id="menuContent">
+                <div class="toggle-switch">
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="modeToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="api-key-section">
+                    <input type="password" id="apiKeyInput" placeholder="Enter API Key">
+                    <button id="apiKeySaveBtn">Save API Key</button>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <p>Enhance your text effortlessly, choose your unique style!</p>
+    </div>
+    <div class="text-boxes">
+        <textarea id="inputText" placeholder="Input text here..."></textarea>
+        <textarea id="outputText" placeholder="Output text here..." readonly></textarea>
+    </div>
+    <div class="buttons">
+        <button id="grammarBtn">Grammar</button>
+        <button id="sincereBtn">Sincere</button>
+        <button id="professionalBtn">Professional</button>
+        <button id="playfulBtn">Playful</button>
+    </div>
+    <div class="notes">
+        <textarea id="notesText" placeholder="Additional notes for the AI agent..."></textarea>
+    </div>
+    <script src="../scripts/content.js"></script>
+    <script src="../scripts/darklight.js"></script>
+    <script src="../scripts/openai.js"></script>
+    <script src="../scripts/menu.js"></script>
+</body>
+</html>
